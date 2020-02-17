@@ -3,7 +3,7 @@
 
 ■Angularの構成ファイル
 
-sampleフォルダ
+例）「sample」フォルダ
 
 ・コンポーネント
 sample.component.ts
