@@ -1,23 +1,23 @@
-#¡Angular‚ÌƒtƒHƒ‹ƒ_‚É‚Â‚¢‚Ä
--ClientApp
---src
----app
-----sample ©”CˆÓ‚ÌƒtƒHƒ‹ƒ_
+â– Angularã®ãƒ•ã‚©ãƒ«ãƒ€ã«ã¤ã„ã¦
+ ClientApp
+  --src
+  ---app
+  ----sample â†ä»»æ„ã®ãƒ•ã‚©ãƒ«ãƒ€
 
 
-#¡Angular‚Ì\¬ƒtƒ@ƒCƒ‹
+â– Angularã®æ§‹æˆãƒ•ã‚¡ã‚¤ãƒ«
 
-sampleƒtƒHƒ‹ƒ_
+sampleãƒ•ã‚©ãƒ«ãƒ€
 
-##EƒRƒ“ƒ|[ƒlƒ“ƒg
+ãƒ»ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
 sample.component.ts
 
-##EViewihtml)
+ãƒ»Viewï¼ˆhtml)
 sample.component.html
 sample.component.css
 
-##Eƒ‚ƒWƒ…[ƒ‹
+ãƒ»ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
 sample-viewmodel.ts
 
-##EƒT[ƒrƒX
+ãƒ»ã‚µãƒ¼ãƒ“ã‚¹
 shutsuzu.service.ts
