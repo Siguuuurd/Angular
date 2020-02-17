@@ -1,9 +1,5 @@
 ■Angularのフォルダについて
- # ClientApp
- ## -- src
- ## --- app
- ## ---- sample ←任意のフォルダ
-
+ ClientApp\src\app\sample ←任意のフォルダ
 
 ■Angularの構成ファイル
 
