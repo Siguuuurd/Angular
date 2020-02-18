@@ -1,19 +1,19 @@
-■Angularのフォルダについて
- ClientApp\src\app\sample ←任意のフォルダ
+■Angularのフォルダについて  
+ ClientApp\src\app\sample ←任意のフォルダ  
 
-■Angularの構成ファイル
+■Angularの構成ファイル  
 
-例）「sample」フォルダ
+例）「sample」フォルダ  
 
 ・コンポーネント
-sample.component.ts
+sample.component.ts  
 
-・View（html)
+・View（html)  
 sample.component.html  
-sample.component.css
+sample.component.css  
 
-・モジュール
-sample-viewmodel.ts
+・モジュール  
+sample-viewmodel.ts  
 
-・サービス
-shutsuzu.service.ts
+・サービス  
+shutsuzu.service.ts  
