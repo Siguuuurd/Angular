@@ -5,7 +5,7 @@
 ・リソース指向の設計  
 ・セッションなど状態を管理せず、必ずそのリクエストで処理が完結する  
 
-
+![RESTFulAPI](https://user-images.githubusercontent.com/28339028/74701497-43fe0580-524a-11ea-9c0a-22573087353c.png)  
 
 下記は[REST入門 基礎知識](https://qiita.com/TakahiRoyte/items/949f4e88caecb02119aa)を引用  
 ■RESTとは  
