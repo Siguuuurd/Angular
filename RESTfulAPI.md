@@ -1,23 +1,62 @@
-■RESTful API(REST API)とは
-RESTの原則に則って構築されたWebシステムのHTTPで呼出しインターフェースのこと。
+下記は[イケてないコード - Webエンジニアのブログ](https://wp.tech-style.info/archives/683)を引用
+■REST APIとは
+・HTTPの技術を最大限活用する、シンプルな設計方法
+・「何のリソースを」「どのように」操作するかをURIやHTTPメソッドで表現する
+・リソース指向の設計
+・セッションなど状態を管理せず、必ずそのリクエストで処理が完結する
 
-![RESTfulAPI  HTTPでの呼出しインターフェース]![RESTfulAPI](https://user-images.githubusercontent.com/28339028/74635428-54aa6f00-51a9-11ea-9a6d-4c3efcb12b0d.png)
 
 
-
+下記は[REST入門 基礎知識](https://qiita.com/TakahiRoyte/items/949f4e88caecb02119aa)を引用
 ■RESTとは
-REpresentational State Transferの略。
-分散型システムにおける複数のソフトウェアを連携させるのに適した設計原則の集合、考え方のこと。
+REST(REpresentational State Transfer)はWebサービスの設計モデルです。
+RESTなWebサービスは、そのサービスのURIにHTTPメソッドでアクセスすることでデータの送受信を行います。
 
-一般によく使われる（本来は狭義の）RESTは、パラメータを指定して特定のURLにHTTPでアクセスすると、
-XMLやJSONなどで記述されたメッセージが送られてくるようなシステム、および、そのような呼び出し規約
-（「RESTful API」と呼ばれる）のことを指す。
+■RESTの設計原則であるRESTful
+RESTは設計に際し以下を設計原則とするよう提言されています。
+
+・アドレス指定可能なURIで公開されていること
+　例）
+　https://test.com/SampleList/Test/1
+　
+　「SampleList」はMVCのコントローラーに当たる。
+　C#では「SampleListController」とコントローラ名になる。
+　
+　「SampleList」の中の「Test」を指定する。(単純にGETなどする場合は不要。)
+　URLの「1」はパラメータ。
+　C#では[HttpGet("Test/{no?}")]と記載する。「?」はNULLを許可する。NULLを許可しない場合は「?」は不要。
+
+・インターフェース(HTTPメソッドの利用)の統一がされていること
+　RESTで用いられるHTTPメソッドは下記のように対応付けられます。
+　取得：GET
+　登録：POST
+　更新：PUT
+　削除：DELETE
+　
+・ステートレスであること
+ ステートとは「状態」を意味します。よってステートレスは「状態がない」という意味になります。
+ ステートレスなやり取りにおいてサーバーはクライアントのセッション情報を保持しません。
+ 逆にステートフルなやり取りにおいてはセッション情報が保持されます。
+ これだけでは理解しづらいこともあると思うので、下記ブログの客と店員の会話の例を読んでみてください。
+[yohei-y:weblog](http://yohei-y.blogspot.com/2007/10/blog-post.html)
 
 
+・処理結果がHTTPステータスコードで通知されること
+ステータスコードはWebサーバーからのレスポンスを表すコードです。
+RESTはHTTPメソッドを利用しているのでHTTPステータスコードをその結果として返却するのは自然な流れです。
+以下に頻出するHTTPステータスコードをまとめます。
 
-■RESTの原則
+### HTTPステータスコード一覧
 
+|コード  | 状態                  |    説明                                                 |
+|:------:| --------------------- | ------------------------------------------------------- |
+| 200    | OK                    | クエストが正常に処理された                              |
+| 201    | Created               | リクエストが正常に処理され、新規リソースが作成された    |
+| 400    | No Content            | リクエストが正常に処理されたが、返す新規情報はない      |
+| 401    | Bad Request           | サーバーが理解できない無効な要求である                  |
+| 403    | Unauthorized          | 要求されたリソースには認証が必要である                  |
+| 404    | Forbidden             | 要求されたリクエストは拒否された                        |
+| 405    | Not Found             | 要求されたリソースはサーバーに存在しない                |
+| 500    | Internal Server Error | サーバーでエラーが発生した                              |
 
-
-■参考URL
-![RESTful APIとは何なのか](https://qiita.com/NagaokaKenichi/items/0647c30ef596cedf4bf2)
+### HTTPステータスコード一覧
