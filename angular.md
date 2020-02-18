@@ -9,7 +9,7 @@
 sample.component.ts
 
 ・View（html)
-sample.component.html
+sample.component.html  
 sample.component.css
 
 ・モジュール
